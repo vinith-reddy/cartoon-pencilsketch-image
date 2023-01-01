@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <style>
+        body
+        {
+            
+            background-color: #FAEBD7;
+        }
+        #txt
+        {
+            width:730px;
+            height:50px;
+            font-size:25px;
+        }
+        #dd
+        {
+            color:white;
+            background-color: #BDB76B;
+            padding-top: 10px;
+            height: 75px;
+        }
+
+        .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    </style>
+
+    
+</head>
+<body >
+    
+    <center>
+        
+            <b><h1>CARTOONIFY YOUR IMAGE...!!</h1></b>
+     
+    </center>
+
+
+
+
+
+
+    <form name="passData" action="http://localhost:5000/uploader" method="post" enctype ="multipart/form-data">
+        <label><center><h1><i>Convert your picture to a cartoonifying image and to a pencil sketch</i></label></h1></center>
+        <center>
+             <p ><input type="file" accept=".png" name="infile"></p>
+        <br>
+        <button type="submit" class="button" id="start">submit</button>
+    </center>
+    <br>
+    
+        
+
+    <img src="{{ url_for('static', filename = 'cartoonifying.jpg') }}" width=450 height=300 style="padding-left: 180px; padding-bottom: 20px;">
+    <img src="{{ url_for('static', filename = 'pencilSketch.png')}}" width=450 height=300 style="padding-left: 140px; padding-bottom: 20px;"> 
+        
+        
+    </form>
+</body>
+</html>

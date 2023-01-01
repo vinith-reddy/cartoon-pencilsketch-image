@@ -1,0 +1,10 @@
+Flask==2.0.1
+Werkzeug
+numpy
+cv2
+PIL
+sys
+os
+click
+Jinja2
+itsdangerous
