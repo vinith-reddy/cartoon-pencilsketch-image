@@ -7,35 +7,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Project</title>
 
-
     <style>
         .btn {
-          background-color: DodgerBlue;
-          border: none;
-          color: white;
-          padding: 12px 30px;
-          cursor: pointer;
-          font-size: 20px;
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
         }
-        
+
         /* Darker background on mouse-over */
         .btn:hover {
-          background-color: RoyalBlue;
+            background-color: RoyalBlue;
         }
-        </style>
-   
+
+        .image-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <a href="{{ url_for('static', filename = 'cartoon.jpg') }}" download="image2">
-      <button class="btn"><i class="fa fa-download" value="{{ url_for('static', filename = 'cartoon.jpg') }}"  ></i> Download</button>
-      <img src="{{ url_for('static', filename = 'cartoon.jpg') }}" width=400 height=500 ></a>
-     
-        
-        <a href="{{ url_for('static', filename = 'pencil.jpg') }}" download="image1">
+    <div class="image-container">
+        <a href="{{ url_for('static', filename='cartoon.jpg') }}" download="cartoon_image">
+            <button class="btn"><i class="fa fa-download"></i> Download Cartoon Image</button>
+            <img src="{{ url_for('static', filename='cartoon.jpg') }}" alt="Cartoon Image" width="400" height="500">
+        </a>
+    </div>
     
-          <button class="btn"><i class="fa fa-download" value="{{ url_for('static', filename = 'pencil.jpg') }}"  ></i> Download</button>
-            <img src="{{ url_for('static', filename = 'pencil.jpg') }}" width=400 height=500 ></a>
-            
-
+    <div class="image-container">
+        <a href="{{ url_for('static', filename='pencil.jpg') }}" download="pencil_image">
+            <button class="btn"><i class="fa fa-download"></i> Download Pencil Sketch Image</button>
+            <img src="{{ url_for('static', filename='pencil.jpg') }}" alt="Pencil Sketch Image" width="400" height="500">
+        </a>
+    </div>
 </body>
 </html>
